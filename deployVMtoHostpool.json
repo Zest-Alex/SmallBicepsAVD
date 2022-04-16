@@ -47,7 +47,7 @@
         "metadata": {
           "description": "The properties of the Hostpool to be updated. Used when the host pool was created empty."
         },
-        "defaultValue": {"targetisaadjoined:i:1"}
+        "defaultValue": "targetisaadjoined:i:1"
       },
       "vmTemplate": {
         "type": "string",
@@ -365,14 +365,14 @@
         "metadata": {
           "description": "True if AAD Join, false if AD join"
         },
-        "defaultValue": false
+        "defaultValue": true
       },
       "intune": {
         "type": "bool",
         "metadata": {
           "description": "True if intune enrollment is selected. False otherwise"
         },
-        "defaultValue": false
+        "defaultValue": true
       },
       "bootDiagnostics": {
         "type": "object",
