@@ -1,7 +1,7 @@
 param vnetName string = 'vnetcore'
 param location string = 'germanywestcentral'
 
-resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2021-05-01' = {
   name: vnetName
   location: location
   properties: {
