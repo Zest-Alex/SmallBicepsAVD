@@ -33,7 +33,7 @@
         "metadata": {
           "description": "The resource group of the host pool to be updated. Used when the host pool was created empty."
         },
-        "defaultValue": ""
+        "defaultValue": "rgcore"
       },
       "hostpoolLocation": {
         "type": "string",
@@ -47,7 +47,7 @@
         "metadata": {
           "description": "The properties of the Hostpool to be updated. Used when the host pool was created empty."
         },
-        "defaultValue": {}
+        "defaultValue": {"targetisaadjoined:i:1"}
       },
       "vmTemplate": {
         "type": "string",
@@ -75,7 +75,7 @@
         "metadata": {
           "description": "A username to be used as the virtual machine administrator account. The vmAdministratorAccountUsername and  vmAdministratorAccountPassword parameters must both be provided. Otherwise, domain administrator credentials provided by administratorAccountUsername and administratorAccountPassword will be used."
         },
-        "defaultValue": ""
+        "defaultValue": "wvd.admin"
       },
       "vmAdministratorAccountPassword": {
         "type": "securestring",
@@ -242,7 +242,8 @@
         ],
         "metadata": {
           "description": "The VM disk type for the VM: HDD or SSD."
-        }
+        },
+        "defaultValue": "StandardSSD_LRS"
       },
       "vmUseManagedDisks": {
         "type": "bool",
