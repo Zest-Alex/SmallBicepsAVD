@@ -1,7 +1,8 @@
-param location string = resourceGroup(rgcore).location
+param vnetName string = 'vnetcore'
+param location string = 'germanywestcentral'
 
 resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
-  name: vnetname
+  name: vnetName
   location: location
   properties: {
     addressSpace: {
@@ -11,13 +12,13 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
     }
     subnets: [
       {
-        name: 'subnet1'
+        name: 'Subnet-1'
         properties: {
           addressPrefix: '10.0.0.0/24'
         }
       }
       {
-        name: 'subnet2'
+        name: 'Subnet-2'
         properties: {
           addressPrefix: '10.0.1.0/24'
         }
