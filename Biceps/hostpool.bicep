@@ -1,8 +1,8 @@
-param hostPoolname string = 'HP-Core'
-param location string = 'germanywestcentral'
-param maxSessionLimit int = 4
-param applicationGroupName string = 'appGroupCore'
-param workSpaceName string = 'WS-Core'
+param hostPoolname string
+param location string
+param maxSessionLimit int
+param applicationGroupName string
+param workSpaceName string
 
 resource hostpooldeploy 'Microsoft.DesktopVirtualization/hostPools@2022-02-10-preview' = {
   name: hostPoolname

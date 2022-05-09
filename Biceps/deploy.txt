@@ -1,0 +1,7 @@
+az group create --name rgcore --location "germanywestcentral"
+
+az deployment group create \
+  --name TestDeployment \
+  --resource-group rgcore \
+  --template-file <path-to-bicep> \
+  --parameters ResourceGroupName=rgcore vnetName=vnetcore location=germanywestcentral hostPoolname=HP-Core maxSessionLimit=4 applicationGroupName=appGroupCore workSpaceName=WS-Core 
